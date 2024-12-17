@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+%flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%button {
+  color: #000;
+  padding: 5px 20px;
+  border-radius: 3px;
+  border: 1px solid #21303c;
+  cursor: pointer;
+}
+h1 {
+  color: #fff;
+}
+.loading {
+  color: #fff;
+}
+.greenBtn {
+  background: #18dc9a;
+}
+.redBtn {
+  background: #ea4c3b;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: #171f29;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+header,
+footer {
+  background: #21303c;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+
+  ul {
+    width: 80%;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+
+    li {
+        &:first-child{
+            margin-right: 50px;
+
+        }
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+
+        &.active{
+          color: #18dc9a;
+        }
+      }
+    }
+  }
+}
+
+.postWrapper {
+  width: 80%;
+  margin: 30px auto;
+  display: flex;
+  align-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  list-style: none;
+
+  li {
+    width: calc(33% - 32px);
+    background: #21303c;
+    color: #fff;
+    padding: 10px;
+    align-items: stretch;
+    font-size: 12px;
+    border-left: 2px solid #fff;
+
+    .postId {
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .postTitle {
+      margin: 15px 0;
+    }
+    .postDesc {
+    }
+    button {
+      @extend %button;
+      margin: 15px 5px 0 0;
+    }
+  }
+}
+
+.postFormWrap {
+  width: 100%;
+  margin: 50px 0 0;
+  @extend %flex;
+
+  .postFormInner {
+    background: #21303c;
+    padding: 15px;
+    border-radius: 4px;
+  }
+
+  input {
+    height: 27px;
+    border: none;
+    margin-right: 5px;
+    border-radius: 3px;
+    padding: 0px 10px;
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  button {
+    @extend %button;
+    margin-left: 10px;
+  }
+}
